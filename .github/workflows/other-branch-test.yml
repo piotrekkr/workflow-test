@@ -1,0 +1,11 @@
+name: Test Other Brunch Run
+
+on:
+  workflow_dispatch:
+
+jobs:
+  destroy:
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Show environment
+        run: env
