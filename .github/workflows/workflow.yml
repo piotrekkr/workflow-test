@@ -20,6 +20,8 @@ jobs:
     steps:
       - name: Show environment v1
         run: env | grep ^GITHUB
-      - name: try connect to db with docker
+
+      - name: Try connect to db with docker
         run: |
-          docker run -it --rm busybox ping mysql
+          docker run --rm busybox nc -zvn mysql 3306
+          docker run --rm busybox nc -zvn google.com 443
