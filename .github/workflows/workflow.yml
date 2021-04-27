@@ -23,5 +23,5 @@ jobs:
 
       - name: Try connect to db with docker
         run: |
-          docker run --rm busybox nc -zvn mysql 3306
-          docker run --rm busybox nc -zvn google.com 443
+          docker run --rm busybox nc -zv -w 3 mysql 3306
+          docker run --rm busybox nc -zv -w 3 google.com 443
