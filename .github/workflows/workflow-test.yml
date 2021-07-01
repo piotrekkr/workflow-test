@@ -1,0 +1,13 @@
+name: New workflow never used
+
+on:
+  workflow_dispatch:
+
+jobs:
+  env:
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Show environment v1
+        run: env | grep ^GITHUB
+      - name: Show ref v1
+        run: echo "===============> Version from $GITHUB_REF"
